@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-
+import android.widget.Toast
 class MainActivity : AppCompatActivity() {
 
 
@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        title = "테이블레이아웃 계산기"
+        title = "RelativeLayout 계산기"
         var edit1 = findViewById<EditText>(R.id.edit1)
         var edit2 = findViewById<EditText>(R.id.edit2)
         val btnAdd = findViewById<Button>(R.id.btnAdd)
@@ -42,8 +42,13 @@ class MainActivity : AppCompatActivity() {
         btnDiv.setOnClickListener{
             var num1 = edit1.text.toString()
             var num2 = edit2.text.toString()
-            var result = Integer.parseInt(num1) / Integer.parseInt(num2)
-            textResult.text = result.toString()
+            if(Integer.parseInt(num2)==0){
+                Toast.makeText(this@MainActivity,"0으로 못나눠요",Toast.LENGTH_SHORT).show()
+            }
+            else {
+                var result = Integer.parseInt(num1)/Integer.parseInt(num2)
+                textResult.text=result.toString()
+            }
         }
     }
 }

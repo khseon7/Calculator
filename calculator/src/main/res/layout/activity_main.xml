@@ -23,7 +23,7 @@
         android:id="@+id/edit2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edit1"
+        android:layout_below="@id/edit1"
         android:layout_marginBottom="10dp"
         android:height="50dp"
         android:inputType="text"
@@ -50,21 +50,21 @@
             android:id="@+id/btnSub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/btnAdd"
+            android:layout_toRightOf="@id/btnAdd"
             android:text="-" />
 
         <Button
             android:id="@+id/btnMul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/btnSub"
+            android:layout_toRightOf="@id/btnSub"
             android:text="*" />
 
         <Button
             android:id="@+id/btndiv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/btnMul"
+            android:layout_toRightOf="@id/btnMul"
             android:text="/" />
     </RelativeLayout>
 
