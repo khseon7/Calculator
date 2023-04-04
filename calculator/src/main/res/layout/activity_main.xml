@@ -6,22 +6,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+
     >
 
 
     <EditText
         android:id="@+id/edit1"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:height="50dp"
         android:inputType="text"
         android:layout_centerHorizontal="true"
         android:hint="Num1"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/edit1"
+        android:id="@+id/partdel"
+        android:text="bs"/>
 
     <EditText
         android:id="@+id/edit2"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/edit1"
         android:layout_marginBottom="10dp"
@@ -30,13 +37,83 @@
         android:layout_centerHorizontal="true"
         android:hint="Num2"/>
 
+    <Button
+        android:id="@+id/del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-2dp"
+        android:layout_toRightOf="@id/edit2"
+        android:layout_alignBottom="@id/edit2"
+        android:text="del" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:columnCount="5"
+        android:id="@+id/numberbutton"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/edit2"
+        android:layout_marginBottom="20dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:id="@+id/BtnNum1"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:id="@+id/BtnNum2"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:id="@+id/BtnNum3"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:id="@+id/BtnNum4"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:id="@+id/BtnNum5"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:id="@+id/BtnNum6"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:id="@+id/BtnNum7"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:id="@+id/BtnNum8"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9"
+            android:id="@+id/BtnNum9"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/BtnNum0"/>
+    </GridLayout>
+
     <RelativeLayout
         android:id="@+id/buttonlayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/edit2"
         android:layout_marginTop="-2dp"
         android:layout_marginBottom="5dp"
+        android:layout_below="@id/numberbutton"
         android:layout_centerHorizontal="true">
 
 
@@ -73,6 +150,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonlayout"
+        android:textSize="20dp"
         android:hint="Result"/>
 
 
